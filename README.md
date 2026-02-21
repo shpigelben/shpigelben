@@ -9,6 +9,7 @@
 ![SimPy](https://img.shields.io/badge/-SimPy-2E3A59?style=flat-square&logo=python&logoColor=white)
 ![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logoColor=white)
 ![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
+![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
 
 > I build computational physics projects, numerical simulations, and practical tools for research workflows.
 
