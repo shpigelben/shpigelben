@@ -19,7 +19,6 @@
 - **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
 
 
-## Simulation Showcase
 
 ![Bounded 2D Random Walk](https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/random_walk_2d.gif)
 
