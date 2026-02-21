@@ -4,12 +4,13 @@ I am working full time as an electro-optical simulation engineer dealing with ra
 
 <p align="center">
   <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white" alt="Jupyter" />
   <img src="https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white" alt="NumPy" />
   <img src="https://img.shields.io/badge/-SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white" alt="SciPy" />
   <img src="https://img.shields.io/badge/-SimPy-2E3A59?style=flat-square&logo=python&logoColor=white" alt="SimPy" />
   <img src="https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX" />
   <img src="https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
-<img src="https://img.shields.io/badge/-Codex-121212?style=flat-square&logoColor=white" alt="Codex" />
+  <img src="https://img.shields.io/badge/-Codex-121212?style=flat-square&logo=openai&logoColor=white" alt="Codex (GPT)" />
 </p>
 
 <p align="center">
