@@ -1,6 +1,6 @@
 # Hi, I'm Ben
 
-**MSc Electro-optics** | **BSc Physics** | **Scientific Computing and Simulation**
+<img src="https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/dynamical_billiard.gif" alt="Rounded-corner dynamical billiard" width="94%" />
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
@@ -9,6 +9,7 @@
 ![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logoColor=white)
 ![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
 ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)
+
 
 > I build computational physics projects, numerical simulations, and practical tools for research workflows.
 
@@ -19,10 +20,7 @@
 - **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
 
 
-
-![Bounded 2D Random Walk](https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/random_walk_2d.gif)
-
-Bounded 2D random walk generated with Python and Matplotlib. Script: [scripts/generate_random_walk_gif.py](https://github.com/shpigelben/shpigelben.github.io/blob/main/scripts/generate_random_walk_gif.py)
+Rounded-corner dynamical billiard with specular reflections, transparent background, and fading trajectory trail. Script: [scripts/generate_billiard_gif.py](https://github.com/shpigelben/shpigelben.github.io/blob/main/scripts/generate_billiard_gif.py)
 
 ## GitHub Activity
 
