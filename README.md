@@ -5,7 +5,9 @@
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
 ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
-![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logo=openai&logoColor=white)
+![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
+![SimPy](https://img.shields.io/badge/-SimPy-2E3A59?style=flat-square&logo=python&logoColor=white)
+![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logoColor=white) <img src="https://cdn.simpleicons.org/openai" alt="OpenAI" height="14" />
 
 > I build computational physics projects, numerical simulations, and practical tools for research workflows.
 
