@@ -2,7 +2,7 @@
 
 <p align="left">
   <a href="https://linkedin.com/in/ben-shpigel">
-    <img src="https://img.shields.io/badge/-LinkedIn-%230A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+    <img src="images/badge_linkedin.svg" alt="LinkedIn" />
   </a>
   <a href="https://physics.stackexchange.com/users/183926/b-shpigel">
     <img src="https://img.shields.io/badge/-Physics%20SE-2F5E9E?style=flat-square&logo=stackexchange&logoColor=white" alt="Physics Stack Exchange" />
@@ -22,8 +22,12 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://img.shields.io/badge/-Codex-121212?style=flat-square&logo=openai&logoColor=white" alt="Codex (GPT)" />
 </p>
 
-## Current Projects
+## Physics Projects
 - **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
+- Dynamical Systems
+- Band Structure Tool
+
+## Math & Algorithms Projects
 - **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
 - **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
 - **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
@@ -36,6 +40,9 @@ I am working full time as an electro-optical simulation engineer dealing with ra
 <p align="center">
   <sub>Generated with <a href="billiard_sim.py"><code>billiard_sim.py</code></a> in this repository.</sub>
 </p>
+
+# Arduino Projects
+- Cat Laser
 
 ## Activity
 
