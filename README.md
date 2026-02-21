@@ -1,6 +1,6 @@
 # Hi, I'm Ben
 
-> I build computational physics projects, numerical simulations, and practical tools for research workflows.
+I am working full time as an electro-optical simulation engineer dealing with radiometric, optical, atmospheric simulations and more. I am also completing my MSc thesis focusing on non-equilibrium absorption and emission of light from metallic structures. This repository mainly hosts personal projects that I find interesting from computational physics to computational geometry, math, puzzles and more. Hopefully some may found some use out of it, or better yet -inspiration.
 
 <p align="center">
   <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -13,9 +13,12 @@
 </p>
 
 
-
 <p align="center">
   <img src="images/dynamical_billiard_v2.gif" alt="Rounded-corner dynamical billiard" width="90%" />
+</p>
+
+<p align="center">
+  <sub>Generated with <a href="billiard_sim.py"><code>billiard_sim.py</code></a> in this repository.</sub>
 </p>
 
 ## Current Projects
@@ -23,9 +26,6 @@
 - **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
 - **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
 - **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
-
-
-Rounded-corner dynamical billiard with specular reflections, transparent background, and fading trajectory trail. Script: [scripts/generate_billiard_gif.py](https://github.com/shpigelben/shpigelben.github.io/blob/main/scripts/generate_billiard_gif.py)
 
 ## GitHub Activity
 
