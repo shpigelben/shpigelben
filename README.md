@@ -12,9 +12,8 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
 </p>
 
-	
 <p align="center">
-  <img src="images/billiard_organic_hole_v1.gif" alt="Organic-hole dynamical billiard" width="90%" />
+  <img src="https://raw.githubusercontent.com/shpigelben/shpigelben/main/images/billiard_organic_hole_v1.gif" alt="Organic-hole dynamical billiard" width="90%" />
 </p>
 
 <p align="center">
