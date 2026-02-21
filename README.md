@@ -1,6 +1,6 @@
 # Hi, I'm Ben
 
-<img src="https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/dynamical_billiard.gif" alt="Rounded-corner dynamical billiard" width="90%" />
+<img src="https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/dynamical_billiard_v2.gif" alt="Rounded-corner dynamical billiard" width="90%" />
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![NumPy](https://img.shields.io/badge/-NumPy-013243?style=flat-square&logo=numpy&logoColor=white)
