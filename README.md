@@ -13,6 +13,7 @@
 
 
 <img src="https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/dynamical_billiard_v3.gif" alt="Rounded-corner dynamical billiard" width="90%" />
+
 ## Current Projects
 - **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
 - **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
