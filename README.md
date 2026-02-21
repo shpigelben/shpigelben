@@ -7,6 +7,7 @@
     <img src="https://img.shields.io/badge/-Physics%20SE-2F5E9E?style=flat-square&logo=stackexchange&logoColor=white" alt="Physics Stack Exchange" height="30" />
   </a>
 </p>
+
 # Hi, I'm Ben 
 
 I am working full time as an electro-optical simulation engineer dealing with radiometric, optical, atmospheric simulations and more. I am also completing my MSc thesis focusing on non-equilibrium absorption and emission of light from metallic structures. This repository mainly hosts personal projects that I find interesting from computational physics to computational geometry, math, puzzles and more. Hopefully some may found some use out of it, or better yet -inspiration.
