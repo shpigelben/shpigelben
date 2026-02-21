@@ -1,3 +1,4 @@
+
 <p align="left">
   <a href="https://linkedin.com/in/ben-shpigel" target="_blank" rel="noopener noreferrer">
     <img src="images/badge_linkedin.svg" alt="LinkedIn" height="30" />
@@ -6,7 +7,6 @@
     <img src="https://img.shields.io/badge/-Physics%20SE-2F5E9E?style=flat-square&logo=stackexchange&logoColor=white" alt="Physics Stack Exchange" height="30" />
   </a>
 </p>
-
 # Hi, I'm Ben 
 
 I am working full time as an electro-optical simulation engineer dealing with radiometric, optical, atmospheric simulations and more. I am also completing my MSc thesis focusing on non-equilibrium absorption and emission of light from metallic structures. This repository mainly hosts personal projects that I find interesting from computational physics to computational geometry, math, puzzles and more. Hopefully some may found some use out of it, or better yet -inspiration.
@@ -22,15 +22,18 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://img.shields.io/badge/-Codex-121212?style=flat-square&logo=openai&logoColor=white" alt="Codex (GPT)" />
 </p>
 
-## Physics Projects
-- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
-- Dynamical Systems
-- Band Structure Tool
+## Current Projects
 
-## Math & Algorithms Projects
-- **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
-- **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
-- **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
+- **PHYSICS**
+	- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
+	- Dynamical Systems
+	- Band Structure Tool
+
+
+- **MATH & ALGORITHMS**
+	- **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
+	- **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
+	- **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
 
 
 <p align="center">
@@ -41,8 +44,6 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <sub>Generated with <a href="billiard_sim.py"><code>billiard_sim.py</code></a> in this repository.</sub>
 </p>
 
-# Arduino Projects
-- Cat Laser
 
 ## Activity
 
