@@ -1,11 +1,11 @@
 # Hi, I'm Ben
 
 <p align="left">
-  <a href="https://linkedin.com/in/ben-shpigel">
-    <img src="images/badge_linkedin.svg" alt="LinkedIn" />
+  <a href="https://linkedin.com/in/ben-shpigel" target="_blank" rel="noopener noreferrer">
+    <img src="images/badge_linkedin.svg" alt="LinkedIn" height="30" />
   </a>
-  <a href="https://physics.stackexchange.com/users/183926/b-shpigel">
-    <img src="https://img.shields.io/badge/-Physics%20SE-2F5E9E?style=flat-square&logo=stackexchange&logoColor=white" alt="Physics Stack Exchange" />
+  <a href="https://physics.stackexchange.com/users/183926/b-shpigel" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/-Physics%20SE-2F5E9E?style=flat-square&logo=stackexchange&logoColor=white" alt="Physics Stack Exchange" height="30" />
   </a>
 </p>
 
