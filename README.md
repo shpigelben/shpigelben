@@ -13,11 +13,17 @@
 > I build computational physics projects, numerical simulations, and practical tools for research workflows.
 
 ## Current Projects
-
+- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
+- **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
 - **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
 - **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
-- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research.
-- **[Project Euler](https://github.com/shpigelben/project_euler)** - Math/programming problem solving and algorithmic practice.
+
+
+## Simulation Showcase
+
+![Bounded 2D Random Walk](https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/random_walk_2d.gif)
+
+Bounded 2D random walk generated with Python and Matplotlib. Script: [scripts/generate_random_walk_gif.py](https://github.com/shpigelben/shpigelben.github.io/blob/main/scripts/generate_random_walk_gif.py)
 
 ## GitHub Activity
 
@@ -25,9 +31,12 @@
 
 ## What I'm Doing
 
-- Building simulation-heavy Python projects
-- Applying computational methods to physics problems
-- Expanding my public portfolio and technical writing
+- Working full-time as an electro-optical simulation physicist.
+- Completing my theoretical MSc thesis on the topic of metal-photoluminescence.
+- Solving math related puzzles for fun.
+- Working on projects that interest me.
+- Toying with robotics.
+- Being a life-long student.
 
 ## Connect
 
