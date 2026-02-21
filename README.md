@@ -1,5 +1,3 @@
-# Hi, I'm Ben
-
 <p align="left">
   <a href="https://linkedin.com/in/ben-shpigel" target="_blank" rel="noopener noreferrer">
     <img src="images/badge_linkedin.svg" alt="LinkedIn" height="30" />
