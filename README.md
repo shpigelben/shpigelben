@@ -1,6 +1,6 @@
-# Hi, I'm Ben 👋
+# Hi, I'm Ben
 
-🔬 **MSc Electro-optics** | 🧪 **BSc Physics** | 💻 **Scientific Computing & Simulation**
+**MSc Electro-optics** | **BSc Physics** | **Scientific Computing and Simulation**
 
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Jupyter](https://img.shields.io/badge/-Jupyter-F37626?style=flat-square&logo=jupyter&logoColor=white)
@@ -12,11 +12,11 @@
 
 ## Current Projects
 
-- ⚛️ **[particle_simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
-- 🏃 **[pursuer_evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
-- 🌈 **[metal_photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research.
-- 🧩 **[project_euler](https://github.com/shpigelben/project_euler)** - Math/programming problem solving and algorithmic practice.
-- 🌐 **[shpigelben.github.io](https://github.com/shpigelben/shpigelben.github.io)** - Personal website and project portfolio.
+- **[particle_simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
+- **[pursuer_evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
+- **[metal_photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research.
+- **[project_euler](https://github.com/shpigelben/project_euler)** - Math/programming problem solving and algorithmic practice.
+- **[shpigelben.github.io](https://github.com/shpigelben/shpigelben.github.io)** - Personal website and project portfolio.
 
 ## GitHub Activity
 
