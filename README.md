@@ -12,9 +12,9 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
 </p>
 
-
+	
 <p align="center">
-  <img src="images/dynamical_billiard_v2.gif" alt="Rounded-corner dynamical billiard" width="90%" />
+  <img src="images/billiard_organic_hole_v1.gif" alt="Organic-hole dynamical billiard" width="90%" />
 </p>
 
 <p align="center">
