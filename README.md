@@ -15,7 +15,7 @@
 
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/shpigelben/shpigelben.github.io/main/images/dynamical_billiard_v3.gif" alt="Rounded-corner dynamical billiard" width="90%" />
+  <img src="images/dynamical_billiard_v2.gif" alt="Rounded-corner dynamical billiard" width="90%" />
 </p>
 
 ## Current Projects
