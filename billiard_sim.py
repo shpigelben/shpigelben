@@ -8,24 +8,36 @@ import matplotlib.pyplot as plt
 from matplotlib.collections import LineCollection
 from matplotlib.colors import to_rgba
 from PIL import Image
+import matplotlib.path as mpath
+import matplotlib.patches as mpatches
 
 def table_surface(x, y, W, H, k, epsilon):
     """
-    Implicit surface function defining the billiard boundary.
-    Returns < 0 for points inside, > 0 for points outside.
+    Implicit surface function defining the fully asymmetric/chaotic billiard boundary
+    with an internal asymmetric hole. Returns < 0 for points inside playable area.
     """
-    theta = np.arctan2(y, x)
+    # Outer boundary
+    theta_out = np.arctan2(y, x)
+    r_ell_out = 1.0 / np.sqrt((np.cos(theta_out) / (W / 2.0))**2 + (np.sin(theta_out) / (H / 2.0))**2)
+    r_out = r_ell_out * (1.0 + epsilon * (np.sin(theta_out) + 0.8 * np.cos(k * theta_out - 1.2) - 0.5 * np.sin((k + 1) * theta_out + 2.0)))
+    f_outer = np.hypot(x, y) - r_out
     
-    # Base ellipse radius at angle theta
-    r_ellipse = 1.0 / np.sqrt((np.cos(theta) / (W / 2.0))**2 + (np.sin(theta) / (H / 2.0))**2)
+    # Inner hole boundary
+    offset_x = W * 0.05
+    offset_y = H * 0.05
+    dx = x - offset_x
+    dy = y - offset_y
+    theta_in = np.arctan2(dy, dx)
     
-    # Perturb the radius with a sinusoid to create "whacky" ripples
-    r_boundary = r_ellipse * (1.0 + epsilon * np.cos(k * theta))
+    # Hole is scaled down to 35% size
+    r_ell_in = 1.0 / np.sqrt((np.cos(theta_in) / (W * 0.35 / 2.0))**2 + (np.sin(theta_in) / (H * 0.35 / 2.0))**2)
+    k_in = 1  # 1 ripple for the hole
+    r_in = r_ell_in * (1.0 + epsilon * (np.sin(theta_in) + 0.8 * np.cos(k_in * theta_in - 1.2) - 0.5 * np.sin((k_in + 1) * theta_in + 2.0)))
+    f_inner = np.hypot(dx, dy) - r_in
     
-    # Current distance from origin
-    r_current = np.hypot(x, y)
-    
-    return r_current - r_boundary
+    # Playable area is intersection of (inside outer) AND (outside inner)
+    # Boolean intersection of implicit functions: max(A, B) < 0
+    return max(f_outer, -f_inner)
 
 def get_normal(x, y, W, H, k, epsilon):
     """
@@ -41,11 +53,12 @@ def get_next_collision(P, V, W, H, k, epsilon):
     """
     Finds the next collision time and normal using ray-marching and bisection.
     """
-    t_step = 0.05 / np.linalg.norm(V)
+    # Use an even finer step size due to the internal hole and tight margins
+    t_step = 0.01 / np.linalg.norm(V)
     t = 1e-5 # Offset slightly to prevent immediate re-collision with the current wall
     
     # Ray-march forward until a boundary crossing is detected
-    for _ in range(10000): 
+    for _ in range(30000): 
         t_next = t + t_step
         p_next = P + V * t_next
         
@@ -75,7 +88,8 @@ def generate_events(W, H, ripples, epsilon, speed, max_time):
     """
     Pre-calculates all collision events up to max_time.
     """
-    P = np.array([0.0, 0.0])
+    # Start position shifted to ensure it spawns safely outside the new inner hole
+    P = np.array([-W / 3.0, 0.0])
     theta = np.radians(37) 
     V = np.array([np.cos(theta), np.sin(theta)]) * speed
     
@@ -113,28 +127,75 @@ def evaluate_trajectory(times, positions, velocities, t_eval):
 
 def draw_boundary(ax, W, H, k, epsilon):
     """
-    Plots the parametric boundary matching the implicit surface function.
+    Plots the parametric boundary matching the implicit surface function
+    and fills the playable area with a translucent gray color.
     """
-    theta = np.linspace(0, 2 * np.pi, 500)
-    r_ellipse = 1.0 / np.sqrt((np.cos(theta) / (W / 2.0))**2 + (np.sin(theta) / (H / 2.0))**2)
-    r_boundary = r_ellipse * (1.0 + epsilon * np.cos(k * theta))
+    theta = np.linspace(0, 2 * np.pi, 1000)
     
-    x = r_boundary * np.cos(theta)
-    y = r_boundary * np.sin(theta)
+    # 1. Outer boundary
+    r_ell_out = 1.0 / np.sqrt((np.cos(theta) / (W / 2.0))**2 + (np.sin(theta) / (H / 2.0))**2)
+    r_out = r_ell_out * (1.0 + epsilon * (np.sin(theta) + 0.8 * np.cos(k * theta - 1.2) - 0.5 * np.sin((k + 1) * theta + 2.0)))
+    x_out = r_out * np.cos(theta)
+    y_out = r_out * np.sin(theta)
     
-    ax.plot(x, y, color='#d0d7de', linewidth=1.6)
+    # 2. Inner hole boundary
+    offset_x = W * 0.05
+    offset_y = H * 0.05
+    k_in = 1
+    r_ell_in = 1.0 / np.sqrt((np.cos(theta) / (W * 0.35 / 2.0))**2 + (np.sin(theta) / (H * 0.35 / 2.0))**2)
+    r_in = r_ell_in * (1.0 + epsilon * (np.sin(theta) + 0.8 * np.cos(k_in * theta - 1.2) - 0.5 * np.sin((k_in + 1) * theta + 2.0)))
+    x_in = r_in * np.cos(theta) + offset_x
+    y_in = r_in * np.sin(theta) + offset_y
+    
+    # Plot both boundary lines
+    ax.plot(x_out, y_out, color='#d0d7de', linewidth=1.2)
+    ax.plot(x_in, y_in, color='#d0d7de', linewidth=1.2)
+    
+    # Fill the playable area (polygon with a hole) using PathPatch
+    verts_out = np.column_stack((x_out, y_out))
+    # Reverse the inner vertices to create the cutout correctly
+    verts_in = np.column_stack((x_in, y_in))[::-1]
+    
+    verts = np.vstack((verts_out, verts_in))
+    codes = np.full(len(verts), mpath.Path.LINETO)
+    codes[0] = mpath.Path.MOVETO
+    codes[len(verts_out)] = mpath.Path.MOVETO
+    
+    path = mpath.Path(verts, codes)
+    # Lighter gray base with slightly lower opacity for maximum tracer contrast
+    patch = mpatches.PathPatch(path, facecolor=(175/255, 184/255, 193/255, 0.15), edgecolor='none')
+    ax.add_patch(patch)
+
+
+def get_outer_boundary_bounds(W, H, k, epsilon, num_points=2000):
+    """
+    Computes tight min/max bounds for the outer organic boundary.
+    """
+    theta = np.linspace(0, 2 * np.pi, num_points)
+    r_ell_out = 1.0 / np.sqrt((np.cos(theta) / (W / 2.0))**2 + (np.sin(theta) / (H / 2.0))**2)
+    r_out = r_ell_out * (
+        1.0
+        + epsilon * (
+            np.sin(theta)
+            + 0.8 * np.cos(k * theta - 1.2)
+            - 0.5 * np.sin((k + 1) * theta + 2.0)
+        )
+    )
+    x_out = r_out * np.cos(theta)
+    y_out = r_out * np.sin(theta)
+    return x_out.min(), x_out.max(), y_out.min(), y_out.max()
 
 def main():
-    parser = argparse.ArgumentParser(description="Simulate 2D dynamical billiard with curved boundaries.")
+    parser = argparse.ArgumentParser(description="Simulate 2D dynamical billiard with a chaotic organic boundary and internal hole.")
     parser.add_argument("--frames", type=int, default=1500, help="Total number of frames.")
     parser.add_argument("--fps", type=int, default=30, help="Animation frames per second.")
     parser.add_argument("--speed", type=float, default=6.0, help="Particle speed in units per second.")
-    parser.add_argument("--width", type=float, default=22.0, help="Table base width.")
-    parser.add_argument("--height", type=float, default=14.0, help="Table base height.")
-    parser.add_argument("--ripples", type=int, default=5, help="Number of sinusoidal ripples along the perimeter.")
-    parser.add_argument("--epsilon", type=float, default=0.5, help="Amplitude of the boundary ripples (0 to 1).")
+    parser.add_argument("--width", type=float, default=18.0, help="Table base width.")
+    parser.add_argument("--height", type=float, default=11.0, help="Table base height.")
+    parser.add_argument("--ripples", type=int, default=5, help="Base frequency for organic ripples.")
+    parser.add_argument("--epsilon", type=float, default=0.25, help="Amplitude of the boundary ripples.")
     parser.add_argument("--trail", type=float, default=1.2, help="Tail length in seconds.")
-    parser.add_argument("--output", type=str, default="images/dynamical_billiard_v3.gif", help="Output path.")
+    parser.add_argument("--output", type=str, default="images/billiard_organic_hole_v1.gif", help="Output path.")
     args = parser.parse_args()
 
     os.makedirs(os.path.dirname(args.output), exist_ok=True)
@@ -144,32 +205,29 @@ def main():
     evt_times, evt_pos, evt_vel = generate_events(args.width, args.height, args.ripples, args.epsilon, args.speed, max_time + args.trail)
 
     fig, ax = plt.subplots(figsize=(args.width / 2.0, args.height / 2.0), dpi=100)
+    fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
     fig.patch.set_alpha(0.0)
     ax.patch.set_alpha(0.0)
     ax.axis('off')
+    ax.set_aspect('equal', adjustable='box')
     
-    # Provide a buffer margin to accommodate the ripples
-    margin = args.width * args.epsilon
-    ax.set_xlim(-args.width / 2.0 - margin, args.width / 2.0 + margin)
-    ax.set_ylim(-args.height / 2.0 - margin, args.height / 2.0 + margin)
+    x_min, x_max, y_min, y_max = get_outer_boundary_bounds(
+        args.width, args.height, args.ripples, args.epsilon
+    )
+    pad_x = 0.015 * (x_max - x_min)
+    pad_y = 0.015 * (y_max - y_min)
+    ax.set_xlim(x_min - pad_x, x_max + pad_x)
+    ax.set_ylim(y_min - pad_y, y_max + pad_y)
     
     draw_boundary(ax, args.width, args.height, args.ripples, args.epsilon)
 
     trail_resolution = int(args.trail * args.fps * 2) 
-    line_collection = LineCollection([], linewidths=1.2, capstyle='round', joinstyle='round')
+    # Widened the line width from 1.5 to 2.5
+    line_collection = LineCollection([], linewidths=2.5, capstyle='round', joinstyle='round')
     ax.add_collection(line_collection)
-    head_marker, = ax.plot(
-        [],
-        [],
-        marker='o',
-        linestyle='None',
-        markersize=4.0,
-        markerfacecolor='#8ec5ff',
-        markeredgecolor='none',
-        zorder=3,
-    )
 
-    base_color = to_rgba('#5ba4f6')
+    # Changed to an ultra-bright fluorescent cyan-blue to make it pop aggressively
+    base_color = to_rgba('#00e5ff')
     rgba_colors = np.zeros((trail_resolution - 1, 4))
     rgba_colors[:, :3] = base_color[:3]
     rgba_colors[:, 3] = np.linspace(0.0, 1.0, trail_resolution - 1)**2 
@@ -184,10 +242,9 @@ def main():
         segments = np.zeros((trail_resolution - 1, 2, 2))
         segments[:, 0, :] = points[:-1, :]
         segments[:, 1, :] = points[1:, :]
-
+        
         line_collection.set_segments(segments)
         line_collection.set_color(rgba_colors)
-        head_marker.set_data([points[-1, 0]], [points[-1, 1]])
 
     print("Rendering frames to memory buffer. This will take a moment...")
     frames = []
@@ -195,7 +252,15 @@ def main():
         update(i)
         
         buf = io.BytesIO()
-        fig.savefig(buf, format='png', transparent=True, facecolor='none', edgecolor='none')
+        fig.savefig(
+            buf,
+            format='png',
+            transparent=True,
+            facecolor='none',
+            edgecolor='none',
+            bbox_inches='tight',
+            pad_inches=0.0,
+        )
         buf.seek(0)
         frames.append(Image.open(buf))
         
