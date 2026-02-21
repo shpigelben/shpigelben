@@ -1,5 +1,14 @@
 # Hi, I'm Ben
 
+<p align="left">
+  <a href="https://linkedin.com/in/ben-shpigel">
+    <img src="https://img.shields.io/badge/-LinkedIn-%230A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://physics.stackexchange.com/users/183926/b-shpigel">
+    <img src="https://img.shields.io/badge/-Physics%20SE-2F5E9E?style=flat-square&logo=stackexchange&logoColor=white" alt="Physics Stack Exchange" />
+  </a>
+</p>
+
 I am working full time as an electro-optical simulation engineer dealing with radiometric, optical, atmospheric simulations and more. I am also completing my MSc thesis focusing on non-equilibrium absorption and emission of light from metallic structures. This repository mainly hosts personal projects that I find interesting from computational physics to computational geometry, math, puzzles and more. Hopefully some may found some use out of it, or better yet -inspiration.
 
 <p align="left">
