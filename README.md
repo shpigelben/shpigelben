@@ -8,16 +8,16 @@
 ![SciPy](https://img.shields.io/badge/-SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white)
 ![SimPy](https://img.shields.io/badge/-SimPy-2E3A59?style=flat-square&logo=python&logoColor=white)
 ![Codex](https://img.shields.io/badge/-Codex-121212?style=flat-square&logoColor=white)
+![LaTeX](https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white)
 
 > I build computational physics projects, numerical simulations, and practical tools for research workflows.
 
 ## Current Projects
 
-- **[particle_simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
-- **[pursuer_evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
-- **[metal_photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research.
-- **[project_euler](https://github.com/shpigelben/project_euler)** - Math/programming problem solving and algorithmic practice.
-- **[shpigelben.github.io](https://github.com/shpigelben/shpigelben.github.io)** - Personal website and project portfolio.
+- **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
+- **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
+- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research.
+- **[Project Euler](https://github.com/shpigelben/project_euler)** - Math/programming problem solving and algorithmic practice.
 
 ## GitHub Activity
 
