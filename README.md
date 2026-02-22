@@ -9,7 +9,7 @@
   </a>
 </p>
 
-I am working full time as an electro-optical simulation engineer dealing with radiometric, optical, atmospheric modeling and more. I am also completing my MSc thesis focusing on non-equilibrium absorption and emission of light from metallic structures. This repository mainly hosts personal projects that I find interesting from computational physics to computational geometry, math, puzzles and more. Hopefully some may found some use out of it, or better yet - inspiration.
+I am working full time as an electro-optical simulation engineer dealing with radiometric, optical, atmospheric simulations and more. I am also completing my MSc thesis focusing on non-equilibrium absorption and emission of light from metallic structures. This repository mainly hosts personal projects that I find interesting from computational physics to computational geometry, math, puzzles and more. Hopefully some may found some use out of it, or better yet -inspiration.
 
 <p align="left">
   <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python" />
@@ -18,22 +18,25 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://img.shields.io/badge/-SciPy-8CAAE6?style=flat-square&logo=scipy&logoColor=white" alt="SciPy" />
   <img src="https://img.shields.io/badge/-SimPy-2E3A59?style=flat-square&logo=python&logoColor=white" alt="SimPy" />
   <img src="https://img.shields.io/badge/-LaTeX-008080?style=flat-square&logo=latex&logoColor=white" alt="LaTeX" />
+  <img src="https://img.shields.io/badge/-C%2B%2B-00599C?style=flat-square&logo=cplusplus&logoColor=white" alt="C++" />
   <img src="https://img.shields.io/badge/-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white" alt="Arduino" />
   <img src="images/badge_codex.svg" alt="Codex (GPT)" />
 </p>
 
 ## Current Projects
 
-- **PHYSICS**
+- **RESEARCH**
 	- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
-	- Dynamical Systems
-	- Band Structure Tool
+	- **[ITO based Desalination](https://github.com/shpigelben/ITO_based_desalination)** - Simulation and analysis tools for ITO-based desalination research.
+
+- **PHYSICS**
+	- **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
 
 
 - **MATH & ALGORITHMS**
 	- **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
-	- **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
 	- **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
+	- **[Voronoi Diagram](https://github.com/shpigelben/voronoi_diagram)** - Geometric algorithms and experiments for Voronoi tessellation.
 
 
 <p align="center">
