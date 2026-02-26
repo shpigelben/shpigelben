@@ -163,35 +163,16 @@ def draw_boundary(ax, W, H, k, epsilon):
     
     path = mpath.Path(verts, codes)
     # Lighter gray base with slightly lower opacity for maximum tracer contrast
-    patch = mpatches.PathPatch(path, facecolor=(175/255, 184/255, 193/255, 0.15), edgecolor='none')
+    patch = mpatches.PathPatch(path, facecolor='#4A4F55', edgecolor='none')
     ax.add_patch(patch)
-
-
-def get_outer_boundary_bounds(W, H, k, epsilon, num_points=2000):
-    """
-    Computes tight min/max bounds for the outer organic boundary.
-    """
-    theta = np.linspace(0, 2 * np.pi, num_points)
-    r_ell_out = 1.0 / np.sqrt((np.cos(theta) / (W / 2.0))**2 + (np.sin(theta) / (H / 2.0))**2)
-    r_out = r_ell_out * (
-        1.0
-        + epsilon * (
-            np.sin(theta)
-            + 0.8 * np.cos(k * theta - 1.2)
-            - 0.5 * np.sin((k + 1) * theta + 2.0)
-        )
-    )
-    x_out = r_out * np.cos(theta)
-    y_out = r_out * np.sin(theta)
-    return x_out.min(), x_out.max(), y_out.min(), y_out.max()
 
 def main():
     parser = argparse.ArgumentParser(description="Simulate 2D dynamical billiard with a chaotic organic boundary and internal hole.")
     parser.add_argument("--frames", type=int, default=1500, help="Total number of frames.")
     parser.add_argument("--fps", type=int, default=30, help="Animation frames per second.")
     parser.add_argument("--speed", type=float, default=6.0, help="Particle speed in units per second.")
-    parser.add_argument("--width", type=float, default=18.0, help="Table base width.")
-    parser.add_argument("--height", type=float, default=11.0, help="Table base height.")
+    parser.add_argument("--width", type=float, default=14.0, help="Table base width.")
+    parser.add_argument("--height", type=float, default=7.0, help="Table base height.")
     parser.add_argument("--ripples", type=int, default=5, help="Base frequency for organic ripples.")
     parser.add_argument("--epsilon", type=float, default=0.25, help="Amplitude of the boundary ripples.")
     parser.add_argument("--trail", type=float, default=1.2, help="Tail length in seconds.")
@@ -205,19 +186,17 @@ def main():
     evt_times, evt_pos, evt_vel = generate_events(args.width, args.height, args.ripples, args.epsilon, args.speed, max_time + args.trail)
 
     fig, ax = plt.subplots(figsize=(args.width / 2.0, args.height / 2.0), dpi=100)
-    fig.subplots_adjust(left=0, right=1, bottom=0, top=1)
     fig.patch.set_alpha(0.0)
     ax.patch.set_alpha(0.0)
     ax.axis('off')
-    ax.set_aspect('equal', adjustable='box')
+    fig.subplots_adjust(left=0, right=1, bottom=0, top=1) # Strip Matplotlib's default figure padding
     
-    x_min, x_max, y_min, y_max = get_outer_boundary_bounds(
-        args.width, args.height, args.ripples, args.epsilon
-    )
-    pad_x = 0.015 * (x_max - x_min)
-    pad_y = 0.015 * (y_max - y_min)
-    ax.set_xlim(x_min - pad_x, x_max + pad_x)
-    ax.set_ylim(y_min - pad_y, y_max + pad_y)
+    # Tight margins based on chaotic shape's max amplitude (~2.3x epsilon) + 5% safe padding
+    margin_factor = args.epsilon * 2.3 + 0.05
+    margin_x = (args.width / 2.0) * margin_factor
+    margin_y = (args.height / 2.0) * margin_factor
+    ax.set_xlim(-args.width / 2.0 - margin_x, args.width / 2.0 + margin_x)
+    ax.set_ylim(-args.height / 2.0 - margin_y, args.height / 2.0 + margin_y)
     
     draw_boundary(ax, args.width, args.height, args.ripples, args.epsilon)
 
@@ -252,15 +231,7 @@ def main():
         update(i)
         
         buf = io.BytesIO()
-        fig.savefig(
-            buf,
-            format='png',
-            transparent=True,
-            facecolor='none',
-            edgecolor='none',
-            bbox_inches='tight',
-            pad_inches=0.0,
-        )
+        fig.savefig(buf, format='png', transparent=True, facecolor='none', edgecolor='none')
         buf.seek(0)
         frames.append(Image.open(buf))
         

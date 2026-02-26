@@ -28,15 +28,20 @@ I am working full time as an electro-optical simulation engineer dealing with ra
 - **RESEARCH**
 	- **[Metal Photoluminescence](https://github.com/shpigelben/metal_photoluminescence)** - Code and structured notes for photoluminescence-focused research (MSc Thesis)
 	- **[ITO based Desalination](https://github.com/shpigelben/ITO_based_desalination)** - Simulation and analysis tools for ITO-based desalination research.
+	- **[Anderson Localization (BCS)](https://github.com/shpigelben/anderson_localization_bcs)** - Research repository for Anderson-localization work in BCS-related systems.
 
 - **PHYSICS**
 	- **[Particle Simulator](https://github.com/shpigelben/particle_simulator)** - Particle-system experiments and collision simulations in Python.
+	- **[Dynamical Billiards](https://github.com/shpigelben/dynamical_billiards)** - Dynamical billiard simulations and visual experiments.
 
 
 - **MATH & ALGORITHMS**
 	- **[Project Euler](https://github.com/shpigelben/project_euler)** - Solved problems math\algorithmic puzzles from [Project Euler](https://projecteuler.net/)
 	- **[Pursuer Evador](https://github.com/shpigelben/pursuer_evador)** - Pursuit-evasion modeling with animation tools and modular agent logic.
 	- **[Voronoi Diagram](https://github.com/shpigelben/voronoi_diagram)** - Geometric algorithms and experiments for Voronoi tessellation.
+
+- **KNOWLEDGE**
+	- **[SecondBrain](https://github.com/shpigelben/SecondBrain)** - Personal knowledge base and structured technical notes.
 
 
 <p align="center">
@@ -54,6 +59,14 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://ghchart.rshah.org/shpigelben" alt="GitHub Contribution Graph" />
 </p>
 
+<p align="center">
+  <img
+    src="https://ghchart.rshah.org/409ba5/shpigelben"
+    alt="GitHub Contribution Graph"
+    width=100%
+  />
+
+</p>
 ## What I'm Doing
 
 - Working full-time as an electro-optical simulation physicist.
