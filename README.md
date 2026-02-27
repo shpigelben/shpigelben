@@ -47,11 +47,13 @@ I am working full time as an electro-optical simulation engineer dealing with ra
   <img src="https://raw.githubusercontent.com/shpigelben/shpigelben/main/images/billiard_organic_hole_v1.gif" alt="Organic-hole dynamical billiard" width="80%" />
 </p>
 
+
 <p align="center">
   <sub>Generated with <a href="billiard_sim.py"><code>billiard_sim.py</code></a> in this repository.</sub>
 </p>
 
 ## Activity
+
 
 <p align="center">
   <img
@@ -60,7 +62,7 @@ I am working full time as an electro-optical simulation engineer dealing with ra
     width=100%
   />
 
-</p>
+
 ## What I'm Doing
 
 - Working full-time as an electro-optical simulation physicist.
